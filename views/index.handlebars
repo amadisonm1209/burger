@@ -1,24 +1,42 @@
+<div class="img"><img class="gene" src="assets/img/Gene_Belcher.png" alt="Boy in Burger Suit"></div>
+
 <h1>Eat-Da-Burger</h1>
 
-<!-- Pass in data from server.js -->
-<ul>
-  {{#each burgers}}
-  	<li>
-  		<p><span class="label">ID:</span> {{this.id}}</p>
-      <p><span class="label">Burger:</span> {{this.burger-name}}</p>
-      <button data-id="{{this.id}}" class="change-eaten">EAT ME!</button>
-  	</li>
-  {{/each}}
-</ul>
+<div id="menu">
+  <!-- Pass in data from server.js -->
+  <h2>Burger Options:</h2>
+  <ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li>
+      {{this.id}}
+      {{this.burger_name}}
+      <button class="change-status" data-id="{{id}}" data-newDevoured="{{devoured}}">Eat Me!</button> 
+      </li>
+    {{/unless}}
+    {{/each}}
+  </ul>
+</div>
+<div id="eaten">
+  <h2>You Ate These Burgers:</h2>
+  <ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>
+      {{this.id}}
+      {{this.burger_name}}
+    </li>
+    {{/if}}
+    {{/each}}
+  </ul>
+</div>
 
-<h2>Add Burger</h2>
+<div id="add-burger">
+  <h2>Add Burger:</h2>
 
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burger-name">Burger Name:</label>
-    <input type="text" id="burger-name" name="name">
+  <div class="form-group-create">
+    <label for="new-burger">Burger Name:</label>
+    <input type="text" id="new-burger" name="burger_name">
+    <button class ="add-da-burger" type="submit">Add to Menu</button>
   </div>
-
-  <button type="submit">Add to Menu</button>
-</form>
+</div>

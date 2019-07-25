@@ -1,0 +1,29 @@
+.gene{
+    margin-top: 15px;
+    margin-left: 38%;
+}
+body{
+    background-color: #DAA520;
+}
+
+h1{
+    font-family: 'Fascinate', cursive;
+    font-size: 60px;
+    text-align: center;
+}
+h2{
+font-family: 'Quicksand', sans-serif;
+font-size: 30px;
+}
+#menu{
+    float: left;
+    padding: 25px;
+}
+#eaten{
+    float: right;
+    padding: 25px;
+}
+#add-burger{
+    clear: both;
+    margin-left: 35%;
+}
