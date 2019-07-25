@@ -20,21 +20,11 @@ h2{
 font-family: 'Quicksand', sans-serif;
 font-size: 30px;
 }
-#menu{
-    float: left;
-    margin-left: 50px;
-    padding: 25px;
-}
+#menu, 
 #eaten{
-    float: right;
-    margin-right: 50px;
-    padding: 25px;
+    height: 250px;
 }
-#add-burger{
-    clear: both;
-    margin-left: 35%;
-    margin-bottom: 50px;
-}
+
 button {
 background-color: crimson;
 border: none;
@@ -50,7 +40,8 @@ transition-duration: 0.4s;
 
 }
 button:hover {
-    background-color: gray;
+    background-color: white;
+    color: red;
 }
 
 .text-label{
@@ -59,4 +50,12 @@ button:hover {
 }
 input{
     height: 25px;
+}
+li{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+.tina{
+    max-width: 100px;
+    height: auto;
 }

@@ -2,41 +2,59 @@
 
 <h1>Eat-Da-Burger</h1>
 
-<div id="menu">
-  <!-- Pass in data from server.js -->
-  <h2>Burger Options:</h2>
-  <ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-      {{this.id}}
-      {{this.burger_name}}
-      <button class="change-status" data-id="{{id}}" data-newDevoured="{{devoured}}">Eat Me!</button> 
-      </li>
-    {{/unless}}
-    {{/each}}
-  </ul>
-</div>
-<div id="eaten">
-  <h2>You Ate These Burgers:</h2>
-  <ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>
-      {{this.id}}
-      {{this.burger_name}}
-    </li>
-    {{/if}}
-    {{/each}}
-  </ul>
+<div class="row" >
+  <div class="col s12 m6">
+    <div class="card green darken-2 z-depth-4" id="menu">
+      <div class="card-content white-text">
+        <!-- Pass in data from server.js -->
+        <h2 class="center-align">Burger Menu:</h2>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          <li class="center-align">
+            {{this.id}}
+            {{this.burger_name}}
+            <button class="change-status" data-id="{{id}}" data-newDevoured="{{devoured}}">Eat Me!</button>
+          </li>
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <div class="card red lighten-1 z-depth-4" id="eaten" >
+      <div class="card-content white-text">
+        <h2 class="center-align">You Ate These Burgers:</h2>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          <li class="center-align">
+            {{this.id}}
+            {{this.burger_name}}
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div id="add-burger">
-  <h2>Add Burger:</h2>
 
-  <div class="form-group-create">
-    <label for="new-burger" class="text-label">Burger Name:</label>
-    <input type="text" id="new-burger" name="burger_name">
-    <button class ="add-da-burger" type="submit">Add to Menu</button>
+
+
+<div class="row" id="add-burger">
+  <div class="col s4 offset-s4">
+    <div class="card grey lighten-4 z-depth-4">
+      <div class="card-content">
+        <h2 class="card-title">Add Burger:</h2>
+          <div class="form-group-create">
+          <label for="new-burger" class="text-label">Burger Name:</label>
+          <input type="text" id="new-burger" name="burger_name">
+          <button class="add-da-burger" type="submit">Add to Menu</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
