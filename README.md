@@ -47,7 +47,7 @@ node server.js (could also use nodemon in place of node)
 ```
 * Go to localhost:8080 in your browser and get to adding and eating burgers!
 
-###Technologies Used
+### Technologies Used
 * Node JS
 * Express 
 * Handlebars 
