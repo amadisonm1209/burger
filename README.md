@@ -24,7 +24,7 @@ Using an ORM, the app has 3 basic CRUD functions...
 
 ### Deploying/Using My App
 
-You can check out my site on Heroku!
+[You can check out my site on Heroku right here!](https://stark-forest-14894.herokuapp.com/)
 
 Or....
 
